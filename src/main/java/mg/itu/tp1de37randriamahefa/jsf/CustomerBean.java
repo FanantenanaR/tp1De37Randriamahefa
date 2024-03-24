@@ -9,6 +9,7 @@ import jakarta.faces.view.ViewScoped;
 import jakarta.inject.Inject;
 import java.io.Serializable;
 import java.util.List;
+import java.util.stream.Collectors;
 import mg.itu.tp1de37randriamahefa.entity.Customer;
 import mg.itu.tp1de37randriamahefa.service.CustomerManager;
 
@@ -20,6 +21,7 @@ import mg.itu.tp1de37randriamahefa.service.CustomerManager;
 @ViewScoped
 public class CustomerBean implements Serializable {
     private List<Customer> customerList;
+    private List<String> stateList;
     
     @Inject  
     private CustomerManager customerManager;
@@ -38,6 +40,24 @@ public class CustomerBean implements Serializable {
           customerList = customerManager.getAllCustomers();
         }
         return customerList;
+    }
+    
+    /**
+     * Obtenir une liste d'Etat depuis notre customers list.
+     * 
+     * @return a list of unique state values
+     */
+    public List<String> getStateList() {
+        if (customerList == null){
+            customerList = getCustomers();
+        }
+        if (stateList == null) {
+            stateList = customerList.stream()
+                .map(Customer::getState)
+                .distinct() 
+                .collect(Collectors.toList()); 
+        }
+        return stateList;
     }
     
 }
