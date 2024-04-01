@@ -1,2 +1,11 @@
+mg\itu\tp1de37randriamahefa\service\CustomerManager.class
+mg\itu\tp1de37randriamahefa\config\ConfigJSF.class
+mg\itu\tp1de37randriamahefa\entity\MicroMarket.class
+mg\itu\tp1de37randriamahefa\jsf\CustomerDetailsBean.class
+mg\itu\tp1de37randriamahefa\service\DiscountManager.class
+mg\itu\tp1de37randriamahefa\entity\Customer.class
+mg\itu\tp1de37randriamahefa\jsf\DiscountConverter.class
 mg\itu\tp1de37randriamahefa\resources\JakartaEE10Resource.class
 mg\itu\tp1de37randriamahefa\JakartaRestConfiguration.class
+mg\itu\tp1de37randriamahefa\entity\Discount.class
+mg\itu\tp1de37randriamahefa\jsf\CustomerBean.class

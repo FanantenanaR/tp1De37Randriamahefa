@@ -58,6 +58,7 @@ public class CustomerDetailsBean implements Serializable {
     public String update() {
         // Modifie la base de données.
         // Il faut affecter à customer (sera expliqué dans le cours).
+        System.out.println("updating");
         customer = customerManager.update(customer);
         return "customerList";
     }
